@@ -15,16 +15,26 @@
  */
 
  h1 {
-  color: rgb(255, 41, 41);
+  color: rgb(0, 0, 0);
 }
 
 ul{
   list-style: none;
 }
 
-.my_container{
- width: 500px;
- margin: 0 auto;
- text-align: center;
- padding: 40px;
+body{
+background-color: rgb(68, 68, 68);
+}
+
+article{
+  background-color: rgb(233, 233, 233);
+  border: solid 1px rgb(180, 188, 188);
+  border-radius: 10px;
+  box-shadow: 5px 5px #888888
+}
+
+.btn{
+  box-shadow: 4px 4px #818dfa;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
 }
