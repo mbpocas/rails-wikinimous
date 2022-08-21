@@ -1,9 +1,16 @@
-<h1>Article info</h1>
+<div class="container">
+  <article>
+    <h1>
+      <%= @article.title %>
+      <small>
+        <%= link_to edit_article_path(@article) do %><i class="fa-regular fa-pen-to-square"></i><% end %>
+        <%= link_to article_path(@article), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
+          <i class="fa-regular fa-trash-can"></i>
+        <% end %>
+      </small>
+    </h1>
 
-<p><strong>Title:</strong> <%= @article.title %></p>
-<p><strong>Content:</strong> <%= @article.content %></p>
-
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Delete', article_path(@article), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
-
-<p><%= link_to 'See all articles', articles_path %></p>
+    <hr>
+    <%= @article.content %>
+  </article>
+</div>
